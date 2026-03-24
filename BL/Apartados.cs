@@ -19,7 +19,7 @@ namespace BL
             try
             {
                 var query = _dbService.ExecuteStoredProcedure<DL.ApartadoGetByIdDTO>(
-                    "DefaultConnection",
+                    "BOPOS",
                     "Apartados.sp_obten_apartado_cliente",
                     new { CodigoCliente }
                 ).ToList();
