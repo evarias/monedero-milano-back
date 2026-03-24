@@ -48,7 +48,7 @@ namespace SL.Controllers
                 Console.WriteLine("La fecha no es válida");
             }
 
-           return BadRequest();
+           return StatusCode(StatusCodes.Status500InternalServerError);
         }
 
         public static string DataFormatString(string fecha)
@@ -63,7 +63,7 @@ namespace SL.Controllers
                 return fechaConvertida.ToString("dd/MM/yyyy HH:mm:ss");
             }
 
-            return "Fecha inválida";
+            return "Fecha no válida";
         }
     }
 }
