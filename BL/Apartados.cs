@@ -12,7 +12,7 @@ namespace BL
             _dbService = dbService;
         }
 
-        public ML.Result GetByIdCliente(string CodigoCliente)
+        public ML.Result GetByIdCliente(string Telefono, string codigoSMS, string plastico)
         {
             ML.Result result = new ML.Result();
 
@@ -21,7 +21,7 @@ namespace BL
                 var query = _dbService.ExecuteStoredProcedure<DL.ApartadoGetByIdDTO>(
                     "BOPOS",
                     "Apartados.sp_obten_apartado_cliente",
-                    new { CodigoCliente }
+                    new { Telefono, codigoSMS, plastico }
                 ).ToList();
 
                 if (query.Count > 0)
