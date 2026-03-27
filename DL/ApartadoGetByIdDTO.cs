@@ -8,6 +8,7 @@ namespace DL
 {
     public class ApartadoGetByIdDTO
     {
+        public string? folioApartado { get; set; }
         public string? CodigoCliente { get; set; }
         public string? Estatus { get; set; }
         public string? EstatusApartado { get; set; }
